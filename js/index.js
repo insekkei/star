@@ -25,21 +25,23 @@ $(function(){
 	
 });
 function playGame(){
+	$('.yuan').removeClass('trans');
+	$('.jin').removeClass('trans2');
 	$('.djs').fadeIn(0).children('span').addClass('ani');
-		$('.djs').delay(3000).fadeOut(function(){
-			$('.yuan').addClass('trans');
-			$('.jin').addClass('trans2');
-			$('.jdt-border').fadeIn(0).children('.jdt').fadeIn(0,function(){
-				$('#gameover').delay(29000).fadeIn(function(){
-					$('.jdt-border').fadeOut(0);
-					$(document).on('click','.restart',function(e){
-						$('#gameover').fadeOut(0);
-						playGame();
-						e.preventDefault();
-					})
-				});
-			}).addClass('jdt-trans');
-			$('.light .weiba').css('opacity',1);
+	$('.djs').delay(3000).fadeOut(function(){
+		$('.yuan').addClass('trans');
+		$('.jin').addClass('trans2');
+		$('.jdt-border').fadeIn(0).children('.jdt').fadeIn(0,function(){
+			$('#gameover').delay(29000).fadeIn(function(){
+				$('.jdt-border').fadeOut(0);
+				$(document).on('click','.restart',function(e){
+					$('#gameover').fadeOut(0);
+					playGame();
+					e.preventDefault();
+				})
+			});
+		}).addClass('jdt-trans');
+		$('.light .weiba').css('opacity',1);
 
-		});
+	});
 }
