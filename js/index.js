@@ -29,7 +29,7 @@ $(function(){
 
 function init() {
 
-  var $weiba = $('.weiba');
+  var $weiba = $('#light strong');
 
   if(window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(event) {
@@ -48,8 +48,6 @@ function init() {
       	'-moz-transform':'rotate(-' + alpha + 'deg)'
       });
     }  , false);
-  }else{
-  	alert('不支持')
   }
 }
 function playGame(){

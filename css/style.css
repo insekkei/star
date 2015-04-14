@@ -225,6 +225,9 @@ background:#9C0B5B;z-index: 3;}
 	-moz-transition:500ms;
 	-o-transition:500ms;
 }
+.light strong{
+	display: inline-block;
+}
 .light strong:nth-child(2n) a{ 
  -webkit-animation: twinkling1 1.4s infinite linear alternate; 
 } 
