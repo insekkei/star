@@ -200,6 +200,8 @@ background:#9C0B5B;z-index: 3;}
   top: 43px;
   overflow:hidden;
   transform: rotate(302deg);
+  -webkit-transform: rotate(302deg);
+  -moz-transform: rotate(302deg);
   z-index: 0;
   opacity: 0;
 }
@@ -214,9 +216,14 @@ background:#9C0B5B;z-index: 3;}
 }
 .light a:before{
 	box-shadow:0 0 10px 10px #9C0B5B;
+	-webkit-box-shadow:0 0 10px 10px #9C0B5B;
+	-moz-box-shadow:0 0 10px 10px #9C0B5B;
 }
 .light a:after{
 	transition:500ms;
+	-webkit-transition:500ms;
+	-moz-transition:500ms;
+	-o-transition:500ms;
 }
 .light strong:nth-child(2n) a{ 
  -webkit-animation: twinkling1 1.4s infinite linear alternate; 

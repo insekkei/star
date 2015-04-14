@@ -29,7 +29,7 @@ $(function(){
 
 function init() {
 
-  var $body = $('body');
+  var $weiba = $('.weiba');
 
   if(window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(event) {
@@ -37,12 +37,12 @@ function init() {
       var alpha;
       //Check for iOS property
       if(event.webkitCompassHeading) {
-        alpha = event.webkitCompassHeading;
+        alpha = event.webkitCompassHeading+302;
         //Direction is reversed for iOS
         dir='-';
       }
-      else alpha = event.alpha;
-      $body.css({
+      else alpha+302 = event.alpha;
+      $weiba.css({
       	'transform':'rotate(' + alpha + 'deg)',
       	'-webkit-transform':'rotate('+dir + alpha + 'deg)',
       	'-moz-transform':'rotate(-' + alpha + 'deg)'
