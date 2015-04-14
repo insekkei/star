@@ -28,7 +28,8 @@ $(function(){
 });
 
 function init() {
-  var compass = $('body');
+
+  var $body = $('body');
 
   if(window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(event) {
@@ -41,10 +42,14 @@ function init() {
         dir='-';
       }
       else alpha = event.alpha;
-      compass.style.Transform = 'rotate(' + alpha + 'deg)';
-      compass.style.WebkitTransform = 'rotate('+dir + alpha + 'deg)';
-      compass.style.MozTransform = 'rotate(-' + alpha + 'deg)'; 
+      $body.css({
+      	'transform':'rotate(' + alpha + 'deg)',
+      	'-webkit-transform':'rotate('+dir + alpha + 'deg)',
+      	'-moz-transform':'rotate(-' + alpha + 'deg)'
+      });
     }  , false);
+  }else{
+  	alert('不支持')
   }
 }
 function playGame(){
