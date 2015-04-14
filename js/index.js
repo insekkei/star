@@ -1,4 +1,5 @@
 $(function(){
+
 	$(document).on('click', '#light a' ,function(e){
 		var $this = $(this);
 		$this.addClass('active').siblings('a').removeClass('active');
@@ -20,10 +21,32 @@ $(function(){
 	$('.start').click(function(e){
 		$(this).fadeOut(0);
 		playGame();
+		init();
 		e.preventDefault();
 	});
 	
 });
+
+function init() {
+  var compass = $('body');
+
+  if(window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', function(event) {
+      var dir='';
+      var alpha;
+      //Check for iOS property
+      if(event.webkitCompassHeading) {
+        alpha = event.webkitCompassHeading;
+        //Direction is reversed for iOS
+        dir='-';
+      }
+      else alpha = event.alpha;
+      compass.style.Transform = 'rotate(' + alpha + 'deg)';
+      compass.style.WebkitTransform = 'rotate('+dir + alpha + 'deg)';
+      compass.style.MozTransform = 'rotate(-' + alpha + 'deg)'; 
+    }  , false);
+  }
+}
 function playGame(){
 	$('.yuan').removeClass('trans');
 	$('.jin').removeClass('trans2');
