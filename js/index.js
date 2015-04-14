@@ -37,11 +37,11 @@ function init() {
       var alpha;
       //Check for iOS property
       if(event.webkitCompassHeading) {
-        alpha = event.webkitCompassHeading+302;
+        alpha = event.webkitCompassHeading;
         //Direction is reversed for iOS
         dir='-';
       }
-      else alpha+302 = event.alpha;
+      else alpha = event.alpha;
       $weiba.css({
       	'transform':'rotate(' + alpha + 'deg)',
       	'-webkit-transform':'rotate('+dir + alpha + 'deg)',
