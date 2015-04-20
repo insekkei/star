@@ -132,8 +132,8 @@ opacity: 1;
 }
 
 /**light**/
-.light{position:absolute;top:30%;left:50%;margin-left:-372px;}
-.light a{display:inline-block;width:18px;height:18px;border-radius:10px;margin:0;
+.light{position:absolute;top:30%;left:50%;margin-left: -348px;}
+.light a{display:inline-block;width: 14px;height: 14px;border-radius:10px;margin:0;
 background:#9C0B5B;z-index: 3;}
 .light a.active,.light a.active:before{
 	-webkit-animation-play-state: paused !important;
@@ -184,14 +184,17 @@ background:#9C0B5B;z-index: 3;}
     position:relative;
 }
 .light a:before,.light a:after{
-	content:"";position:absolute;width:18px;height:18px;top:50%;left:50%;margin:-9px 0 0 -9px;
+	content:"";position:absolute;
+	width: 14px;
+	height: 14px;top:50%;left:50%;
+	margin: -7px 0 0 -7px;
 	background:#9C0B5B;border-radius:50%;
 	opacity: .7;
 	
 }
 .weiba{
-  width: 44px;
-  height: 44px;position:relative;
+  width: 40px;
+  height: 40px;position:relative;
   display:inline-block;
   left: -30px;
   top: 43px;
@@ -212,9 +215,9 @@ background:#9C0B5B;z-index: 3;}
   opacity: 0.5;
 }
 .light a:before{
-	box-shadow:0 0 10px 10px #9C0B5B;
-	-webkit-box-shadow:0 0 10px 10px #9C0B5B;
-	-moz-box-shadow:0 0 10px 10px #9C0B5B;
+	box-shadow:0 0 8px 8px #9C0B5B;
+	-webkit-box-shadow:0 0 8px 8px #9C0B5B;
+	-moz-box-shadow:0 0 8px 8px #9C0B5B;
 }
 .light a:after{
 	transition:500ms;
